@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @ViewBag.Greeting World
+        <p>
+            <h2>We're going to have an exciting party</h2>.<br />
+           <img src="/images/house_party.jpg" alt="house_party" width="460" height="345">
+
+            <h3>Want to joint the party ? click the link below to reserve a seat</h3>
+        </p>
+        <a asp-action="RsvpForm"> RSVP Now</a>
+    </div>
+</body>
+</html>
+
+@{
+    Layout = null;
+}

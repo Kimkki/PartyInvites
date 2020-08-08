@@ -10,8 +10,27 @@ namespace PartyInvites.Controllers
 {
     public class HomeController : Controller
     {
+      
         public IActionResult Index()
         {
+            int hour = DateTime.Now.Hour;
+            ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
+
+            return View("MyView");
+        }
+
+        [HttpGet] //method should only be used to get Requests
+        public ViewResult RsvpForm()
+        {
+            return View();
+        }
+
+
+        [HttpPost]  //this method deals with post requests 
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+            //stores response from guest
+
             return View();
         }
 
